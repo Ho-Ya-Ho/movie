@@ -74,8 +74,9 @@ function Nav() {
                 })}
             </ul>
             <ul className={styles.icon__list}>
-                <li><a href="https://twitter.com/?lang=ko" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "twitter"]} /></a></li>
+                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "facebook"]} /></a></li>
                 <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "instagram"]} /></a></li>
+                <li><a href="https://twitter.com/?lang=ko" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "twitter"]} /></a></li>
             </ul>
         </nav>
         <div className={styles.null}></div>

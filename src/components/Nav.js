@@ -11,35 +11,11 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 
 function Nav() {
     library.add(fab);
-    let last_known_scroll_position = 0;
-    let ticking = false;
     const [changing, setChanging] = useState(false);
-    const [scrolling, setScrolling] = useState(false);
+    const scrolling = false;
 
     const pageReLoading = useSetRecoilState(listPageReLoading);
     const [focusPath, setFocusPath] = useRecoilState(focusNav);
-
-    const doSomething = (scroll_pos) => {
-        if (scroll_pos >= 10) {
-            setChanging(true);
-            setScrolling(true);
-        } else {
-            setChanging(false);
-            setScrolling(false);
-        }
-    }
-
-    window.addEventListener('scroll', function(e) {
-        last_known_scroll_position = window.scrollY;
-
-        if (!ticking) {
-            window.requestAnimationFrame(function() {
-                doSomething(last_known_scroll_position);
-                ticking = false;
-            });
-            ticking = true;
-        }
-    });
 
     const onMouseOverOut = () => {
         if (scrolling)
@@ -79,7 +55,7 @@ function Nav() {
                 <li><a href="https://twitter.com/?lang=ko" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "twitter"]} /></a></li>
             </ul>
         </nav>
-        <div className={styles.null}></div>
+        <div className={styles.null}/>
     </div>
 
 }
